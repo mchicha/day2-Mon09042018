@@ -1,0 +1,46 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>PARTNER EXTENSION 1 (OPTIONAL)</title>
+       
+    </head>
+    <body>
+        <h1>PARTNER EXTENSION 1 (OPTIONAL)</h1>
+        <h3>With a partner, write a JavaScript program to find the most frequently occuring item of an array. </h3>
+        <h1>var array = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];</h1>
+        
+        <script type="text/javascript">
+            
+            var array = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+            
+            mostFrequentItem = greatestOccurence(array);
+            
+            function greatestOccurence(arr) {
+                var occurence = 1;
+                var nb_occur = 0;
+                var num;
+                for (var i=0; i<arr.length; i++)
+                {
+                    for (var j=i; j<arr.length; j++)
+                    {
+                        if (arr[i] == arr[j])
+                            nb_occur++;
+                        if (occurence < nb_occur)
+                        {
+                            occurence = nb_occur; 
+                            num = arr[i];
+                        }
+                    }
+                    nb_occur = 0;
+                }
+                console.log(num + " ( " +occurence +" times ) ");
+                return num;
+            }
+            
+        </script>
+       
+    </body>
+</html>
